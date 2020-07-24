@@ -6,6 +6,9 @@ public class CalcMatrixNxN implements Runnable, SaveMatrix {
 
     private final int[][] matrixA;
     private final int[][] matrixB;
+    
+    volatile int aik;
+    volatile int bkj;    
 
     public CalcMatrixNxN(int[][] matrixA, int[][] matrixB) {
         this.matrixA = matrixA;
@@ -32,8 +35,8 @@ public class CalcMatrixNxN implements Runnable, SaveMatrix {
                 for (int j = 0; j < n; j++) {
                     Integer iSum = 0;
                     for (int k = 0; k < n; k++) {
-                        int aik = matrixA[i][k];  // у первой матрицы берем Строку
-                        int bkj = matrixB[k][j];  // у второй матрицы берем Столбец
+                        aik = matrixA[i][k];  // у первой матрицы берем Строку
+                        bkj = matrixB[k][j];  // у второй матрицы берем Столбец
 
                         synchronized (iSum) {
                             Thread.sleep(1000);  // Что бы поработал каждый поток
