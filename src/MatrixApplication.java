@@ -53,30 +53,28 @@ public class MatrixApplication {
         Thread tOne = new Thread(matrixNxN);
         Thread tTwo = new Thread(matrixNxN);
 
-        System.out.println("Первый шаг - Первый поток выполняется: " + tOne.isAlive());
-        System.out.println("Первый шаг - Второй поток выполняется: " + tTwo.isAlive());
+        System.out.println("Первый шаг - " + tOne.getName() + " выполняется: " + tOne.isAlive());
+        System.out.println("Первый шаг - " + tTwo.getName() + " выполняется: " + tTwo.isAlive());
 
         // 2. Запуск потоков
         tOne.start();
         tTwo.start();
 
-        System.out.println("Вторй шаг - Первый поток выполняется: " + tOne.isAlive());
-        System.out.println("Вторй шаг - Второй поток выполняется: " + tTwo.isAlive());
+        System.out.println("Второй шаг - " + tOne.getName() + " выполняется: " + tOne.isAlive());
+        System.out.println("Второй шаг - " + tTwo.getName() + " выполняется: " + tTwo.isAlive());
 
         try {
+            // 3. Завершение работы потоков         
             System.out.println("Ждим завершения потоков");
-            Thread.sleep(10000);
-            // 3. Завершение работы потоков
             tOne.join();
             tTwo.join();
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
 
-        System.out.println("Третий шаг - Первый поток выполняется: " + tOne.isAlive());
-        System.out.println("Третий шаг - Второй поток выполняется: " + tTwo.isAlive());
+        System.out.println("Третий шаг - " + tOne.getName() + " выполняется: " + tOne.isAlive());
+        System.out.println("Третий шаг - " + tTwo.getName() + " выполняется: " + tTwo.isAlive());
 
-
-        System.out.println("Завершение основного потока");
+        System.out.println("Завершение "  + Thread.currentThread().getName() + " потока (основного).");
     }
 }
