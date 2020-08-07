@@ -26,4 +26,6 @@ C[i][j] = сумма по k от 1 до N A[i][k]*B[k][j].
 Минимальный балл для принятия - 2
 
 
-!!! Диаграмму классов (Kaporov_Artem_Thread_v1.drawio) открывать на сайте https://www.diagrameditor.com/
+!!! Приложенную Диаграмму классов (файлы с расширением drawio) открывать на сайте https://www.diagrameditor.com/
+или попробовать по ссылке
+https://www.diagrameditor.com/webapp/?ui=atlas&tr=0&gh=0&gl=0&gapi=0&od=0&db=0&lang=en#LKaporov_Artem_Thread_v2.drawio
