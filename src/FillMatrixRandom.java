@@ -1,9 +1,6 @@
 /*
-Интерфейс для заполнения матрицы
+Интерфейс для заполнения матрицы случайными числами
 */
-public interface  FillMatrixRandom {
-  /*
-  Метод для заполнения матрицы случайными числами
-  */
-  void fillMatrixRandom();
+public interface FillMatrixRandom {
+    void fillMatrixRandom();
 }

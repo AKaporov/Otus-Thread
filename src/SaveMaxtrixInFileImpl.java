@@ -4,9 +4,12 @@ import java.util.Arrays;
 /*
 
 Класс для сохранения матрицы в файл.
-Если имя файла не передано, то сохраняется во временной директрории
-указанной в TEMP/TMP с префиксом Otus_FileName
+Если имя файла не передано, то сохраняется по пути указаном в TEMP/TMP с префиксом Otus_FileName
 (напрмиер, C:\Windows\Temp\Otus_FileName17321303727237893112.tmp)
+
+    //по умолчанию файл создается во временной директрории
+    //C:\Windows\Temp\Task2001.txt9756643539832909062.tmp
+//            File your_file_name = File.createTempFile("your_file_name", null);
 
 */
 
